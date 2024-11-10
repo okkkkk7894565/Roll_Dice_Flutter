@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:roll_dice/styled_text.dart';
 class GardientContainer extends StatelessWidget {
   const GardientContainer({super.key});
   @override
@@ -16,7 +16,7 @@ class GardientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child:
+        child:StyledText(),
       ),
     );
   }
