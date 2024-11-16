@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
-  const StyledText({super.key});
+  final String ouputText;
+  const StyledText(this.ouputText, {super.key});
+  // when ussing "final" , u can not reassign value of variable
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      "Hello From Styled_text!",
-      style: TextStyle(
-        color: Color.fromARGB(255, 172, 8, 136),
+    return Text(
+      ouputText,
+      style: const TextStyle(
+        color: Color.fromARGB(255, 66, 154, 226),
         fontSize: 28,
       ),
     );

@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:roll_dice/styled_text.dart';
+
+const starAligment = Alignment.topLeft;
+const endAligment = Alignment.bottomRight;
+
 class GardientContainer extends StatelessWidget {
-  const GardientContainer({super.key});
+  const List<Color> gardientColor;
+  const GardientContainer(this.gardientColor, {super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 47, 170, 43),
-            Color.fromARGB(255, 158, 87, 87),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          colors:gardientColor,
+          begin: starAligment,
+          end: endAligment,
         ),
       ),
       child: const Center(
-        child:StyledText(),
+        child: StyledText('Create ussing constructor'),
       ),
     );
   }
 }
- 
