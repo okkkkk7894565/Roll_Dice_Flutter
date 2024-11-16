@@ -4,21 +4,25 @@ import 'package:roll_dice/styled_text.dart';
 const starAligment = Alignment.topLeft;
 const endAligment = Alignment.bottomRight;
 
-class GardientContainer extends StatelessWidget {
-  const List<Color> gardientColor;
-  const GardientContainer(this.gardientColor, {super.key});
+class GradientContainer extends StatelessWidget {
+  const GradientContainer(this.color1, this.color2, {super.key});
+  final Color color1;
+  final Color color2;
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors:gardientColor,
-          begin: starAligment,
-          end: endAligment,
+          colors: [color1, color2],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
       ),
-      child: const Center(
-        child: StyledText('Create ussing constructor'),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dice-2.png',
+          width: 200,
+        ),
       ),
     );
   }

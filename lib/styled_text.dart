@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class StyledText extends StatelessWidget {
   final String ouputText;
   const StyledText(this.ouputText, {super.key});
@@ -9,7 +8,7 @@ class StyledText extends StatelessWidget {
     return Text(
       ouputText,
       style: const TextStyle(
-        color: Color.fromARGB(255, 66, 154, 226),
+        color: Color.fromARGB(255, 100, 220, 236),
         fontSize: 28,
       ),
     );
